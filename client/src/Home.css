@@ -1,0 +1,265 @@
+.home-container {
+  background-image: url("./Images/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute elements evenly */
+  align-items: flex-start;
+  padding: 50px;
+}
+
+/* Title text */
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #000;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* "Get Start Now" button */
+.start-button {
+  background-color: white;
+  border: 2px solid black;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px; /* Rounded button */
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: lightgray;
+}
+
+/* Arrow icon inside the "Get Start Now" button */
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Search box in the center */
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-box {
+  width: 250px;
+  padding: 12px 40px 12px 15px; /* Left padding for the search icon */
+  border: 2px solid black;
+  font-size: 16px;
+  border-radius: 25px; /* Rounded search box */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-box:focus {
+  border-color: #007bff;
+}
+
+/* Search icon inside the search box */
+.search-icon {
+  position: absolute;
+  right: 15px; /* Positioning the icon inside the box from the right */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/*---About Us Section---*/
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-section {
+  width: 50%;
+  text-align: left;
+}
+
+.text-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.text-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.supervisor {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.image-section {
+  width: 50%;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/*-----Content Section-----*/
+.content-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling Benefits Section */
+.benefits-section {
+  text-align: left;
+}
+
+.benefits-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.benefits-section h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.benefits-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Styling Services Section */
+.services-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Display services side by side */
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Styling service boxes */
+.service-box {
+  width: 48%; /* Half width to be side by side */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling titles inside service boxes */
+.service-box h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Styling text */
+.service-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+/* Styling icons */
+.service-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.hero-section {
+  background-image: url('./Images/Background.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ⬅️ يجعل المحتوى يبدأ من الأعلى */
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px; /* ⬅️ تقليل المسافة العلوية */
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 10px;
+  line-height: 1.4;
+  max-width: 800px;
+  margin-top: 0; /* ⬅️ لا تدفعه للأسفل */
+}
+
+.hero-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #fff;
+  color: #007bff;
+  font-weight: bold;
+  border: 2px solid #111;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.hero-button .arrow-icon {
+  width: 20px;
+  height: 20px;
+}
