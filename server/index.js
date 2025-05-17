@@ -491,8 +491,7 @@ app.put("/updateStaffProfile/:email/", async (req, res) => {
   }
 });
 
-const port = ENV.PORT || 3001;
+const port = ENV.Port || 3001;
 app.listen(port, () => {
   console.log(`You are connected: ${port}`);
 });
-
