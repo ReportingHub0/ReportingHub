@@ -101,9 +101,7 @@ export const updateStaff = createAsyncThunk(
 //Delete Staff Info
 export const deleteStaff = createAsyncThunk("staff/deleteStaff", async (id) => {
   try {
-    const response = await axios.delete(
-      `${ENV.SERVER_URL}/deleteStaff/${id}`
-    );
+    const response = await axios.delete(`${ENV.SERVER_URL}/deleteStaff/${id}`);
     return id;
   } catch (error) {
     console.log(error);
@@ -169,7 +167,10 @@ export const staffSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(addStaff.fulfilled, (state, action) => {
-        state.staff.push(action.payload);
+        state.staff = [
+          ...(Array.isArray(state.staff) ? state.staff : []),
+          action.payload,
+        ];
         state.isLoading = true;
       })
       .addCase(addStaff.rejected, (state) => {

@@ -43,7 +43,7 @@ const AddStaff = () => {
       console.log("Form data", data);
       alert("Staff Added.");
       dispatch(addStaff(staffData));
-      navigate("/ManageStaff");
+      navigate("/manageStaff");
     } catch (error) {
       console.log("ERROR!");
     }

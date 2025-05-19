@@ -18,7 +18,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { staffSchemaValidation } from "../Validations/StaffValidation";
 import { updateStaff } from "../Features/StaffSlice";
 import { FaArrowLeftLong } from "react-icons/fa6";
-import React from 'react';
+import React from "react";
 const ManageStaff = () => {
   const staff = useSelector((state) => state.staff.staff);
 
@@ -90,44 +90,47 @@ const ManageStaff = () => {
               </thead>
               <tbody>
                 {Array.isArray(staff) &&
-                  staff.map((staff) => (
-                    <tr key={staff._id}>
-                      <td>{staff.id}</td>
-                      <td>{staff.name}</td>
-                      <td>{staff.email}</td>
-                      <td>{staff.role}</td>
-                      <td>{staff.phoneNumber}</td>
-                      <td>{staff.building}</td>
-                      <td>
-                        <button
-                          onClick={() => {
-                            handleDelete(staff._id);
-                          }}
-                          className="btn btn-danger"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                      <td>
-                        <button
-                          onClick={() => {
-                            setid(staff.id);
-                            setname(staff.name);
-                            setemail(staff.email);
-                            setpassword(staff.password);
-                            setconfirmPassword(staff.password);
-                            setphoneNumber(staff.phoneNumber);
-                            setbuilding(staff.building);
-                            setrole(staff.role);
-                            setShowEdit(true);
-                          }}
-                          className="btn btn-primary"
-                        >
-                          Update
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  staff.map(
+                    (member, index) =>
+                      member && (
+                        <tr key={member._id || index}>
+                          <td>{member.id || member._id || "N/A"}</td>
+                          <td>{member.name}</td>
+                          <td>{member.email}</td>
+                          <td>{member.role}</td>
+                          <td>{member.phoneNumber}</td>
+                          <td>{member.building}</td>
+                          <td>
+                            <button
+                              onClick={() => {
+                                handleDelete(member._id);
+                              }}
+                              className="btn btn-danger"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                          <td>
+                            <button
+                              onClick={() => {
+                                setid(member.id || member._id || "");
+                                setname(member.name);
+                                setemail(member.email);
+                                setpassword(member.password);
+                                setconfirmPassword(member.password);
+                                setphoneNumber(member.phoneNumber);
+                                setbuilding(member.building);
+                                setrole(member.role);
+                                setShowEdit(true);
+                              }}
+                              className="btn btn-primary"
+                            >
+                              Update
+                            </button>
+                          </td>
+                        </tr>
+                      )
+                  )}
               </tbody>
             </Table>
           </div>

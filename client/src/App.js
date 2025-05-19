@@ -28,7 +28,7 @@ import HandledIssues from "./Components/HandledIssues";
 import Headers from "./Components/Headers";
 import IssuesOverview from "./Components/IssuesOverview";
 import StaffProfile from "./Components/StaffProfile";
-import React from 'react';
+import React from "react";
 const AppContent = () => {
   const location = useLocation();
   const hiddenRoutes = ["/login", "/register"];
@@ -47,7 +47,7 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/ReportIssue" element={<ReportIssue />} />
+          <Route path="/reportIssue" element={<ReportIssue />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -55,12 +55,12 @@ const AppContent = () => {
           <Route path="/Graph" element={<Graph />} />
           <Route path="/addStaff" element={<AddStaff />} />
           <Route path="/manageStaff" element={<ManageStaff />} />
-          <Route path="issues" element={<Issues />} />
+          <Route path="/issues" element={<Issues />} />
           <Route path="/profilepage" element={<ProfilePage />} />
           <Route path="/manageUsers" element={<ManageUsers />} />
           <Route path="/issuesByBuild" element={<IssuesByBuild />} />
           <Route path="/handledIssues" element={<HandledIssues />} />
-          <Route path="/IssuesOverview" element={<IssuesOverview />} />
+          <Route path="/issuesOverview" element={<IssuesOverview />} />
           <Route path="/staffProfile" element={<StaffProfile />} />
         </Routes>
       </Row>

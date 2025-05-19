@@ -14,6 +14,7 @@ const IssuesByBuild = () => {
     dispatch(viewIssues());
   }, [dispatch]);
 
+
   useEffect(() => {
     const initialStates = {};
     issues.forEach((issue) => {
@@ -23,7 +24,9 @@ const IssuesByBuild = () => {
   }, [issues]);
 
   const issuesByBuild = issues.filter(
-    (issue) => issue.building === staff.building && issue.state === "pending"
+    (issue) =>
+      issue.building?.toLowerCase() === staff.building?.toLowerCase() &&
+      issue.state?.toLowerCase() === "pending"
   );
 
   const handleSelectChange = (e, issueId) => {

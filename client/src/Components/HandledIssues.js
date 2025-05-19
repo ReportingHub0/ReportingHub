@@ -27,10 +27,14 @@ const HandledIssues = () => {
     dispatch(viewIssues());
   }, [dispatch]);
 
-  const issuesByBuild =
-    staff && staff._id
-      ? issues.filter((issue) => issue.assignedTo === staff._id)
-      : [];
+const issuesByID =
+  staff && staff._id
+    ? issues.filter(
+        (issue) =>
+          issue.assignedTo === staff._id ||
+          issue.assignedTo?._id === staff._id
+      )
+    : [];
   const handleUpdateClick = (issue) => {
     setSelectedIssue(issue);
     setNewState(issue.state || "pending");
@@ -49,6 +53,8 @@ const HandledIssues = () => {
     alert("Issue updated successfully!");
     setSelectedIssue(null);
   };
+
+  
 
   return (
     <div className="reports-container">
@@ -73,14 +79,14 @@ const HandledIssues = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {issuesByBuild.length === 0 ? (
+                  {issuesByID.length === 0 ? (
                     <tr>
                       <td colSpan="10" className="text-center text-muted">
                         No issues assigned to you.
                       </td>
                     </tr>
                   ) : (
-                    issuesByBuild.map((issue) => (
+                    issuesByID.map((issue) => (
                       <tr key={issue._id}>
                         <td>{issue.title}</td>
                         <td>{issue.category}</td>

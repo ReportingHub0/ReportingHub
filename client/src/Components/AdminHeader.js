@@ -48,12 +48,12 @@ const AdminHeader = () => {
             </NavLink>
           </NavItem>
           <NavItem className="nav-item">
-            <NavLink tag={Link} to="/AddStaff" className="nav-link">
+            <NavLink tag={Link} to="/addStaff" className="nav-link">
               Add Staff
             </NavLink>
           </NavItem>
           <NavItem className="nav-item">
-            <NavLink tag={Link} to="/ManageStaff" className="nav-link">
+            <NavLink tag={Link} to="/manageStaff" className="nav-link">
               Manage Staff
             </NavLink>
           </NavItem>
@@ -63,7 +63,7 @@ const AdminHeader = () => {
             </NavLink>
           </NavItem>
           <NavItem className="nav-item">
-            <NavLink tag={Link} to="/IssuesOverview" className="nav-link">
+            <NavLink tag={Link} to="/issuesOverview" className="nav-link">
             Issues Overview
             </NavLink>
           </NavItem>

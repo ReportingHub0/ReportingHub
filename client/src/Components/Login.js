@@ -70,7 +70,11 @@ const Login = () => {
     }
 
     if (isStaffSuccess && staff) {
-      navigate("/issues");
+      if (staff.role === "Technical") {
+        navigate("/issuesByBuild");
+      } else if (staff.role === "HelpDesk") {
+        navigate("/issues");
+      }
     }
 
     if (isError || isAdminError || isStaffError) {
@@ -88,7 +92,6 @@ const Login = () => {
     isStaffError,
     navigate,
   ]);
-
 
   return (
     <div className="login-container">

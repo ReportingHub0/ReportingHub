@@ -38,12 +38,12 @@ const ReportIssueHeader = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="nav-links" navbar>
           <NavItem>
-            <NavLink tag={Link} to="/ReportIssue">
+            <NavLink tag={Link} to="/reportIssue">
               Report Issue
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to="/Reports">
+            <NavLink tag={Link} to="/reports">
               Reports
             </NavLink>
           </NavItem>
